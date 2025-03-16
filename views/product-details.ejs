@@ -1,0 +1,84 @@
+<%- include('partials/header') %>
+
+<div class="product-details-container">
+    <div class="product-details">
+        <div class="product-image-section">
+            <img src="<%= product.image %>" alt="<%= product.name %>" class="main-image">
+        </div>
+
+        <div class="product-info-section">
+            <h1><%= product.name %></h1>
+            
+            <div class="rating-section">
+                <div class="stars">
+                    <% for(let i = 0; i < Math.floor(product.rating); i++) { %>★<% } %>
+                    <% if(product.rating % 1 !== 0) { %>☆<% } %>
+                </div>
+                <span class="rating-count"><%= product.rating %> out of 5</span>
+                <span class="review-count"><%= product.reviews.toLocaleString() %> ratings</span>
+            </div>
+
+            <div class="price-section">
+                <span class="price-label">Price:</span>
+                <span class="price">
+                    <span class="currency">$</span>
+                    <span class="amount"><%= product.price.toFixed(2) %></span>
+                </span>
+                <span class="prime-eligible">
+                    <i class="fab fa-amazon"></i> Prime
+                    <span class="delivery-info">FREE delivery tomorrow</span>
+                </span>
+            </div>
+
+            <div class="about-section">
+                <h2>About this item</h2>
+                <p><%= product.description %></p>
+            </div>
+        </div>
+
+        <div class="buy-section">
+            <div class="buy-box">
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount"><%= product.price.toFixed(2) %></span>
+                </div>
+                
+                <div class="delivery-info">
+                    <i class="fab fa-amazon"></i> Prime
+                    <p>FREE delivery tomorrow</p>
+                    <p>Order within 4 hrs 32 mins</p>
+                </div>
+
+                <div class="stock-info">
+                    <span class="in-stock">In Stock</span>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
+
+                <div class="secure-transaction">
+                    <i class="fas fa-lock"></i>
+                    Secure transaction
+                </div>
+
+                <div class="ships-from">
+                    <p>Ships from: Amazon.com</p>
+                    <p>Sold by: Amazon.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %> 

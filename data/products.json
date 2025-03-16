@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "Echo Dot (5th Gen)",
+        "price": 49.99,
+        "description": "Smart speaker with Alexa - Cloud Blue",
+        "image": "https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1500_.jpg",
+        "rating": 4.7,
+        "reviews": 123456,
+        "category": "Electronics"
+    },
+    {
+        "id": "2",
+        "name": "Apple AirPods Pro (2nd Generation)",
+        "price": 249.99,
+        "description": "Active Noise Cancelling, Transparency Mode, Spatial Audio",
+        "image": "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SL1500_.jpg",
+        "rating": 4.8,
+        "reviews": 89012,
+        "category": "Electronics"
+    },
+    {
+        "id": "3",
+        "name": "Kindle Paperwhite",
+        "price": 139.99,
+        "description": "8 GB, 6.8\" display, adjustable warm light, waterproof",
+        "image": "https://m.media-amazon.com/images/I/61Vv7Ydj8+L._AC_SL1500_.jpg",
+        "rating": 4.6,
+        "reviews": 45678,
+        "category": "Electronics"
+    },
+    {
+        "id": "4",
+        "name": "Instant Pot Duo Plus",
+        "price": 119.99,
+        "description": "9-in-1 Electric Pressure Cooker, 6 Quart",
+        "image": "https://m.media-amazon.com/images/I/71pv3HFwqyL._AC_SL1500_.jpg",
+        "rating": 4.7,
+        "reviews": 34567,
+        "category": "Home & Kitchen"
+    },
+    {
+        "id": "5",
+        "name": "Samsung 65\" QLED 4K TV",
+        "price": 997.99,
+        "description": "Q60B Series, Quantum HDR, Motion Xcelerator",
+        "image": "https://m.media-amazon.com/images/I/71LJJrKbezL._AC_SL1500_.jpg",
+        "rating": 4.6,
+        "reviews": 12345,
+        "category": "Electronics"
+    },
+    {
+        "id": "6",
+        "name": "Fitbit Charge 5",
+        "price": 149.95,
+        "description": "Advanced Fitness & Health Tracker with GPS",
+        "image": "https://m.media-amazon.com/images/I/61YYwmXh8pL._AC_SL1500_.jpg",
+        "rating": 4.5,
+        "reviews": 23456,
+        "category": "Electronics"
+    }
+] 

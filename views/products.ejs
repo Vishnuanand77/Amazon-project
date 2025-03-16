@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+
+<div class="products-container">
+    <aside class="filters">
+        <h2>Filters</h2>
+        <div class="filter-section">
+            <h3>Category</h3>
+            <ul>
+                <li>
+                    <input type="checkbox" id="electronics" checked>
+                    <label for="electronics">Electronics</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="home-kitchen" checked>
+                    <label for="home-kitchen">Home & Kitchen</label>
+                </li>
+            </ul>
+        </div>
+        <div class="filter-section">
+            <h3>Price Range</h3>
+            <ul>
+                <li><a href="#">Under $25</a></li>
+                <li><a href="#">$25 to $50</a></li>
+                <li><a href="#">$50 to $100</a></li>
+                <li><a href="#">$100 to $200</a></li>
+                <li><a href="#">$200 & Above</a></li>
+            </ul>
+        </div>
+        <div class="filter-section">
+            <h3>Avg. Customer Review</h3>
+            <ul class="ratings">
+                <li>
+                    <a href="#">
+                        <div class="stars">★★★★★</div>
+                        <span>& Up</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="stars">★★★★☆</div>
+                        <span>& Up</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="stars">★★★☆☆</div>
+                        <span>& Up</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="products-grid">
+        <% if (products.length === 0) { %>
+            <div class="no-results">
+                <h2>No products found</h2>
+                <p>Try different search terms or filters</p>
+            </div>
+        <% } else { %>
+            <% products.forEach(product => { %>
+                <div class="product-card">
+                    <a href="/products/<%= product.id %>">
+                        <div class="product-image">
+                            <img src="<%= product.image %>" alt="<%= product.name %>">
+                        </div>
+                        <div class="product-info">
+                            <h3><%= product.name %></h3>
+                            <div class="rating">
+                                <div class="stars">
+                                    <% for(let i = 0; i < Math.floor(product.rating); i++) { %>★<% } %>
+                                    <% if(product.rating % 1 !== 0) { %>☆<% } %>
+                                </div>
+                                <span class="review-count"><%= product.reviews.toLocaleString() %></span>
+                            </div>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount"><%= product.price.toFixed(2) %></span>
+                            </div>
+                            <div class="prime-shipping">
+                                <i class="fab fa-amazon"></i> Prime
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer') %> 

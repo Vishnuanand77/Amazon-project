@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="error-container">
+    <div class="error-content">
+        <h1>Oops!</h1>
+        <p><%= message %></p>
+        <div class="error-actions">
+            <a href="/" class="primary-btn">Go to Homepage</a>
+            <a href="/products" class="secondary-btn">Browse Products</a>
+        </div>
+        <div class="error-help">
+            <h2>Need help?</h2>
+            <ul>
+                <li><a href="#">Visit Help Center</a></li>
+                <li><a href="#">Contact Customer Service</a></li>
+                <li><a href="#">Return to Previous Page</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %> 
